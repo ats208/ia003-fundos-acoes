@@ -1,0 +1,11 @@
+etapa,filtro,antes,depois,removidas
+1,Classificação CVM 'Ações' (cadastro),8784,8784,0
+2,Em funcionamento normal,8784,4147,4637
+3,Não exclusiva (exclui só 'S'; vazio fica),4147,2976,1171
+4a,Com cota na data inicial (2024-12-31),2976,2626,350
+4b,Com cota na data final (2025-12-31),2626,2606,20
+5,PL na data final >= R$ 1 milhão,2606,2604,2
+info_sumiram_pop,Classes dos passos 1-3 com cota em 2024-12-31 e sem cota em 2025-12-31,2626,20,
+info_sumiram_todas,"Idem, mas sobre todas as classes de Ações do cadastro (qualquer situação/exclusividade)",3812,214,
+info_so_subclasse_passos_1_3,"Classes sem linha própria, só subclasse (com cota em data_ini, passos 1-3)",2626,1,
+info_so_subclasse_final,"Idem, entre as classes que ficaram na população",2604,1,

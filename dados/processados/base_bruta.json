@@ -1,0 +1,66 @@
+{
+  "fonte": "dados/brutos/2026-11-13",
+  "informe_diario": {
+    "arquivos_mensais": 24,
+    "primeiro_mes": "202412",
+    "ultimo_mes": "202611",
+    "linhas": 12421041,
+    "colunas": 10,
+    "nomes_colunas": [
+      "TP_FUNDO_CLASSE",
+      "CNPJ_FUNDO_CLASSE",
+      "ID_SUBCLASSE",
+      "DT_COMPTC",
+      "VL_TOTAL",
+      "VL_QUOTA",
+      "VL_PATRIM_LIQ",
+      "CAPTC_DIA",
+      "RESG_DIA",
+      "NR_COTST"
+    ],
+    "classes_distintas": 31141,
+    "chave_classe": "CNPJ_FUNDO_CLASSE",
+    "data_min": "2024-12-02",
+    "data_max": "2026-11-12",
+    "linhas_por_mes": {
+      "202412": 539104,
+      "202501": 560718,
+      "202502": 512125,
+      "202503": 488025,
+      "202504": 508731,
+      "202505": 531278,
+      "202506": 516180,
+      "202507": 579610,
+      "202508": 527241,
+      "202509": 551719,
+      "202510": 577167,
+      "202511": 478449,
+      "202512": 556400,
+      "202601": 532602,
+      "202602": 457730,
+      "202603": 562042,
+      "202604": 512032,
+      "202605": 511752,
+      "202606": 538582,
+      "202607": 589316,
+      "202608": 538445,
+      "202609": 538519,
+      "202610": 538198,
+      "202611": 175076
+    }
+  },
+  "cadastro": {
+    "registro_classe": {
+      "arquivo": "registro_classe.csv (registro_fundo_classe.zip)",
+      "linhas": 37132,
+      "classes_distintas": 37118,
+      "colunas": 30
+    },
+    "cad_fi": {
+      "arquivo": "cad_fi.csv",
+      "linhas": 46805,
+      "classes_distintas": 41102,
+      "colunas": 41
+    }
+  }
+}

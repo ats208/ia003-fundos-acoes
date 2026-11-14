@@ -1,0 +1,52 @@
+# Configuração do trabalho final — lida pelos scripts e pelo app.
+# Valores PREENCHER são completados pelos agentes 2 e 3 (ou pelo André de manhã).
+
+semente: 20261115
+alfa: 0.05
+
+tamanho_amostra:
+  confianca: 0.95
+  margem_erro: 0.05
+  p_planejamento: 0.5        # maximiza n quando a proporção é desconhecida
+
+janelas:
+  "2026":
+    papel: principal
+    data_ini: "2025-12-31"      # última data de cota de dez/2025
+    data_fim: "2026-11-10"      # mais recente com >= 95% de cobertura
+    ibov_ini: 161125.0
+    ibov_fim: 171337.0
+    cdi_acumulado: 0.1203187238
+  "2025":
+    papel: comparacao
+    data_ini: "2024-12-31"      # última data de cota de dez/2024
+    data_fim: "2025-12-31"      # última data de cota de dez/2025
+    ibov_ini: 120283.0
+    ibov_fim: 161125.0
+    cdi_acumulado: 0.1432422689
+
+# Volatilidade acima deste valor (anual, fração: 5 = 500%) é erro de dado; coluna erro_vol dos CSV. Só o codigo/03_inferencia.py usa; o app não lê.
+vol_limite_erro: 5.0
+
+# Ibovespa: true depois de conferir os fechamentos (texto exibido na página Início); data da conferência abaixo.
+ibov_conferido_b3: true
+ibov_conferido_em: 2026-11-14   # AAAA-MM-DD
+
+populacao:
+  pl_minimo: 1000000
+  cobertura_minima_fim: 0.95
+
+variaveis:
+  quantitativas: [ret, exc_ibov, pl_fim]
+  qualitativas: [bateu_ibov, bateu_cdi, publico_alvo, estrutura]
+
+hipoteses:
+  - {id: P1, tipo: proporcao, variavel: bateu_ibov, evento: true, h0: 0.5, pergunta: "Gestão ativa contra o índice é cara ou coroa?"}
+  - {id: P2, tipo: proporcao, variavel: bateu_cdi,  evento: true, h0: 0.5, pergunta: "Valeu correr risco de bolsa?"}
+  - {id: M1, tipo: media,     variavel: exc_ibov,   h0: 0.0, pergunta: "O fundo médio entrega o índice?"}
+  - {id: M2, tipo: diferenca_medias, variavel: exc_ibov, coluna_grupo: publico_alvo, grupo_a: "Público Geral", grupo_b: "Qualificado", h0: 0.0, pergunta: "Fundos para o público geral rendem, em média, o mesmo que fundos para investidor qualificado?"}
+
+simulacao:
+  repeticoes: 1000
+bootstrap:
+  reamostras: 10000

@@ -1,0 +1,28 @@
+{
+  "2026": {
+    "data_ini": "2025-12-31",
+    "data_fim": "2026-11-10",
+    "ibov_ini": 161125.0,
+    "ibov_fim": 171337.0,
+    "ibov_ret": 0.06337936384794407,
+    "ibov_data_ini_usada": "2025-12-30",
+    "ibov_data_fim_usada": "2026-11-10",
+    "ibov_fonte": "Yahoo Finance ^BVSP (não oficial); conferir na B3",
+    "cdi_acumulado": 0.12031872379885211,
+    "cdi_dias": 214,
+    "cdi_fonte": "BCB SGS série 12"
+  },
+  "2025": {
+    "data_ini": "2024-12-31",
+    "data_fim": "2025-12-31",
+    "ibov_ini": 120283.0,
+    "ibov_fim": 161125.0,
+    "ibov_ret": 0.33954922973321255,
+    "ibov_data_ini_usada": "2024-12-30",
+    "ibov_data_fim_usada": "2025-12-30",
+    "ibov_fonte": "Yahoo Finance ^BVSP (não oficial); conferir na B3",
+    "cdi_acumulado": 0.14324226892249126,
+    "cdi_dias": 252,
+    "cdi_fonte": "BCB SGS série 12"
+  }
+}

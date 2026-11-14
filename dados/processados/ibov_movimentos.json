@@ -1,0 +1,38 @@
+{
+  "2026": {
+    "pregoes": 214,
+    "maior_queda": {
+      "data": "2026-10-26",
+      "de": 205083.0,
+      "para": 176608.0,
+      "variacao": -0.1388462232364457
+    },
+    "maior_alta": {
+      "data": "2026-10-05",
+      "de": 192115.0,
+      "para": 206912.0,
+      "variacao": 0.07702157561876999
+    },
+    "fonte": "Yahoo Finance ^BVSP (não oficial); conferir na B3",
+    "ibov_data_ini_fechamento_serie": 161125.0,
+    "ibov_data_fim_fechamento_serie": 171337.0
+  },
+  "2025": {
+    "pregoes": 250,
+    "maior_queda": {
+      "data": "2025-12-05",
+      "de": 164456.0,
+      "para": 157369.0,
+      "variacao": -0.04309359342316488
+    },
+    "maior_alta": {
+      "data": "2025-04-09",
+      "de": 123932.0,
+      "para": 127796.0,
+      "variacao": 0.031178388148339398
+    },
+    "fonte": "Yahoo Finance ^BVSP (não oficial); conferir na B3",
+    "ibov_data_ini_fechamento_serie": 120283.0,
+    "ibov_data_fim_fechamento_serie": 161125.0
+  }
+}
