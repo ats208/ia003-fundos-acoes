@@ -19,6 +19,8 @@ if 'condicao_a' in m2:
     param += [f"- **Diferença = {num(m2['mu0'], 0)} no M2:** compara dois grupos independentes da amostra, público geral e investidor qualificado, no mesmo excesso sobre o Ibovespa. Diferença zero significa que os dois grupos rendem o mesmo, em média. O público profissional fica de fora porque a pergunta compara só esses dois públicos.",
               f"- **Teste t de Welch no M2:** os dois grupos não precisam ter a mesma variância (desvios padrão da amostra: {pct(m2['condicao_a']['s'])} no público geral e {pct(m2['condicao_b']['s'])} no qualificado). O erro padrão soma a variância de cada grupo e os graus de liberdade vêm da fórmula de Welch."]
 st.markdown('\n'.join(param))
+# Pergunta de cada hipótese, no formato do teste (o empate é a hipótese nula).
+PERGUNTAS = {'P1': 'Metade dos fundos supera o Ibovespa?', 'P2': 'Metade dos fundos supera o CDI?', 'M1': 'O excesso médio sobre o Ibovespa é zero (empate com o índice)?', 'M2': 'O excesso médio sobre o Ibovespa é igual no público geral e no qualificado?'}
 ROTULOS_IC = {'ic_wald_fpc': 'Wald, com correção para população finita', 'ic_t_fpc': 't, com correção para população finita', 'ic_wald': 'Wald, sem correção para população finita', 'ic_t': 't, sem correção para população finita', 'ic_wilson': 'Wilson', 'ic_bootstrap': 'bootstrap', 'ic_welch': 'Welch'}
 
 
@@ -57,7 +59,7 @@ linhas = []
 for ident in ['P1', 'P2', 'M1', 'M2']:
     h = res['hipoteses'].get(ident, {})
     c = res['comparacao'].get(ident, {})
-    st.subheader(f"{ident} — {h.get('pergunta', 'PREENCHER')}")
+    st.subheader(f"{ident} — {PERGUNTAS.get(ident, h.get('pergunta', 'PREENCHER'))}")
     if not h or 'ic_principal' not in h or not c:
         st.warning('Resultado pendente: PREENCHER.'); continue
     if h['tipo'] == 'diferenca_medias':

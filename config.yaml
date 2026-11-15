@@ -41,10 +41,10 @@ variaveis:
   qualitativas: [bateu_ibov, bateu_cdi, publico_alvo, estrutura]
 
 hipoteses:
-  - {id: P1, tipo: proporcao, variavel: bateu_ibov, evento: true, h0: 0.5, pergunta: "Gestão ativa contra o índice é cara ou coroa?"}
-  - {id: P2, tipo: proporcao, variavel: bateu_cdi,  evento: true, h0: 0.5, pergunta: "Valeu correr risco de bolsa?"}
-  - {id: M1, tipo: media,     variavel: exc_ibov,   h0: 0.0, pergunta: "O fundo médio entrega o índice?"}
-  - {id: M2, tipo: diferenca_medias, variavel: exc_ibov, coluna_grupo: publico_alvo, grupo_a: "Público Geral", grupo_b: "Qualificado", h0: 0.0, pergunta: "Fundos para o público geral rendem, em média, o mesmo que fundos para investidor qualificado?"}
+  - {id: P1, tipo: proporcao, variavel: bateu_ibov, evento: true, h0: 0.5, pergunta: "Metade dos fundos supera o Ibovespa?"}
+  - {id: P2, tipo: proporcao, variavel: bateu_cdi,  evento: true, h0: 0.5, pergunta: "Metade dos fundos supera o CDI?"}
+  - {id: M1, tipo: media,     variavel: exc_ibov,   h0: 0.0, pergunta: "O excesso médio sobre o Ibovespa é zero (empate com o índice)?"}
+  - {id: M2, tipo: diferenca_medias, variavel: exc_ibov, coluna_grupo: publico_alvo, grupo_a: "Público Geral", grupo_b: "Qualificado", h0: 0.0, pergunta: "O excesso médio sobre o Ibovespa é igual no público geral e no qualificado?"}
 
 simulacao:
   repeticoes: 1000
